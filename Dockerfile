@@ -15,6 +15,5 @@ RUN apt-get update && apt-get install -y libmcrypt-dev wget \
     && echo 'zend_extension = /usr/local/lib/php/extensions/no-debug-non-zts-20160303/xdebug.so' > /usr/local/etc/php/php.ini \
     && rm -rf xdebug-2.5.4*
 
-ENV MYSQL_ALLOW_EMPTY_PASSWORD=yes
 
 EXPOSE 80
