@@ -16,6 +16,5 @@ RUN apt-get update && apt-get install -y libmcrypt-dev wget \
     && rm -rf xdebug-2.5.4*
 
 ENV MYSQL_ALLOW_EMPTY_PASSWORD=yes
-ENV MYSQL_DATABASE=newbouncer
 
 EXPOSE 80
