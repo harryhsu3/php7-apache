@@ -1,13 +1,13 @@
-FROM php:7.1-apache
+FROM php:7.1.14-apache
 
 MAINTAINER Harry Hsu <harry@acom-networks.com>
 
 RUN apt-get update && apt-get install -y libmcrypt-dev wget openssl libssl-dev \
     && docker-php-ext-install -j$(nproc) mcrypt mysqli pdo pdo_mysql mbstring ftp \
-    && wget http://xdebug.org/files/xdebug-2.5.4.tgz -O /tmp/xdebug-2.5.4.tgz \
+    && wget http://xdebug.org/files/xdebug-2.6.0.tgz -O /tmp/xdebug-2.6.0.tgz \
     && cd /tmp \
-    && tar -xvzf xdebug-2.5.4.tgz \
-    && cd /tmp/xdebug-2.5.4 \
+    && tar -xvzf xdebug-2.6.0.tgz \
+    && cd /tmp/xdebug-2.6.0 \
     && phpize \
     && ./configure \
     && make \
